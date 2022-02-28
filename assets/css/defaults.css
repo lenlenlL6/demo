@@ -1,0 +1,242 @@
+/*==================================================*/
+/*Mặc định*/
+@font-face {
+	font-family: minecraft;
+	src: url(../fonts/Minecrafter.Reg.ttf);
+}
+* {
+	color: white;
+	font-family: sans-serif;
+	margin: 0;
+	user-select: none;
+}
+body {
+	background-color: #262626;
+}
+/*Custom Scrollbar*/
+::-webkit-scrollbar {
+	background-color: #262626;
+	width: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #171717;
+	border: 2px solid #525252;
+}
+::-webkit-scrollbar-thumb:hover {
+	border: 2px solid #1d4ed8;
+}
+li::-webkit-scrollbar {
+	height: 10px;
+}
+/*==================================================*/
+/*Thuộc Header*/
+header {
+	align-items: center;
+	background-color: #171717;
+	border-bottom: 2px solid #525252;
+	display: flex;
+	position: sticky;
+	top: 0;
+}
+.sidebarIcon {
+	cursor: pointer;
+	height: 45px;
+	margin: 5px;
+	width: 45px;
+}
+.sidebarIconClose {
+	content: url(../media/header/sidebar_icon_close.png);
+}
+.sidebarIconClose:hover {
+	content: url(../media/header/sidebar_icon_close_hover.png);
+}
+.sidebarIconOpen {
+	content: url(../media/header/sidebar_icon_open.png);
+}
+.sidebarIconOpen:hover {
+	content: url(../media/header/sidebar_icon_open_hover.png);
+}
+.sidebarIconHide {
+	display: none;
+}
+.logoWiki {
+	content: url(../media/logo/logo_wiki.png);
+	height: 45px;
+	margin: 5px;
+	margin-left: 10px;
+	width: 45px;
+}
+.headerTitle {
+	cursor: pointer;
+	margin-top: 3px;
+	font-family: minecraft;
+	font-size: 30px;
+	text-decoration: none;
+}
+.search {
+	margin-left: auto;
+	margin-right: 5%;
+	height: 30px;
+	width: 270px;
+	z-index: 1;
+}
+.searchBar {
+	align-items: center;
+	border-bottom: 2px solid #525252;
+	display: flex;
+}
+.searchBar:hover {
+	border-bottom-color: #1d4ed8;
+}
+.searchIcon {
+	content: url(../media/header/search_icon.png);
+	cursor: pointer;
+	height: 16px;
+	margin: 5px;
+	width: 16px;
+}
+.searchIcon:hover {
+	content: url(../media/header/search_icon_hover.png);
+}
+.searchInput {
+	background-color: transparent;
+	border: none;
+	font-size: 16px;
+	height: 100%;
+	outline: none;
+	width: 100%;
+}
+.searchBox {
+	background-color: #171717;
+	border: 2px solid #525252;
+	border-top: none;
+	overflow-y: auto;
+	padding: 3px;
+}
+.searchBoxHide {
+	display: none;
+}
+.searchBox li {
+	display: block;
+	list-style: none;
+	overflow-x: auto;
+	padding: 3px;
+}
+.searchBox li:hover {
+	background-color: #1d4ed8;
+}
+/*==================================================*/
+/*Sidebar*/
+.sidebar {
+	background-color: #171717;
+	border-right: 2px solid #525252;
+	height: 100%;
+	overflow-y: scroll;
+	position: fixed;
+	width: 200px;
+	z-index: 1;
+}
+.sidebar::-webkit-scrollbar-thumb {
+	border-right: none;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+	border-right: 2px solid #1d4ed8;
+}
+.sidebarClose {
+	display: none;
+}
+.sidebar li {
+	display: block;
+	font-size: 16px;
+	list-style: none;
+	overflow-x: auto;
+	margin: 10px;
+}
+/*==================================================*/
+/*Text color/decoration*/
+.textLink:link, .textLink:visited {
+	color: #3b82f6;
+	text-decoration: none;
+}
+.textLink:hover {
+	color: #1d4ed8;
+	text-decoration: underline;
+}
+.textLink:active {
+	color: yellow;
+	text-decoration: underline;
+}
+.textCommand {
+	color: #c67d4e;
+	cursor: copy;
+	user-select: text;
+}
+.textSyntax {
+	color: #00e9ed;
+	cursor: text;
+	user-select: text;
+}
+/*==================================================*/
+/*Content*/
+.content {
+	display: flex;
+	flex-direction: column;
+}
+.contentBox {
+	background-color: #171717;
+	border: 2px solid #525252;
+	margin: 15px;
+}
+.contentTitle {
+	border-bottom: 2px solid #525252;
+  font-size: 30px;
+  margin: 10px;
+  width: fit-content;
+}
+.contentText {
+  font-size: 16px;
+  margin: 5px;
+  margin-left: 10px;
+}
+.contentText::before {
+	content: "▷ ";
+}
+/*==================================================*/
+/*Thuộc Footer*/
+footer {
+	background-color: #171717;
+	border-top: 2px solid #525252;
+	cursor: default;
+	font-size: 20px;
+	text-align: center;
+}
+.socialLogo {
+	height: 40px;
+	margin: 5px;
+	width: 40px;
+}
+.logoYoutube {
+	content: url(../media/logo/logo_youtube.png);
+}
+.logoYoutube:hover {
+	content: url(../media/logo/logo_youtube_hover.png);
+}
+.logoDiscord {
+	content: url(../media/logo/logo_discord.png);
+}
+.logoDiscord:hover {
+	content: url(../media/logo/logo_discord_hover.png);
+}
+.logoTwitter {
+	content: url(../media/logo/logo_twitter.png);
+}
+.logoTwitter:hover {
+	content: url(../media/logo/logo_twitter_hover.png);
+}
+.logoFacebook {
+	content: url(../media/logo/logo_facebook.png);
+}
+.logoFacebook:hover {
+	content: url(../media/logo/logo_facebook_hover.png);
+}
+/*==================================================*/
