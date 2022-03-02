@@ -6,13 +6,12 @@ searchInput.onkeyup = (e)=>{
 	let userData = e.target.value;
 	let emptyArray = [];
 	if(userData){
-		emptyArray = suggestions.filter((data)=>{
+		emptyArray = filter.filter((data)=>{
 			return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
 		});
 		emptyArray = emptyArray.map((data)=>{
 			return data = '<li>' + data + '</li>';
 		});
-		console.log(emptyArray);
 		searchBox.classList.remove("searchBoxHide");
 		showSuggestions(emptyArray);
 		let allList = searchBox.querySelectorAll("li");
@@ -35,8 +34,9 @@ function select(element){
 function showSuggestions(list){
 	let listData;
 	if(!list.length){
-		userValue = searchInput.value;
-		listData = '<li>' + userValue + '</li>';
+		// userValue = searchInput.value;
+		// listData = '<li>' + userValue + '</li>';
+		listData = '<li>Không có dữ liệu trong Wiki</li>';
 	}else{
 		listData = list.join('');
 	}
@@ -45,15 +45,17 @@ function showSuggestions(list){
 
 function searchFilter(searchValue){
 	if(mucLuc.includes(searchValue)) {
-		window.open("https://hgvn23.github.io/muc-luc/" + searchValue + ".html", "_self");
-	}else if(cacDanhSach.includes(searchValue)) {
-		window.open("https://hgvn23.github.io/danh-sach/" + searchValue + ".html", "_self");
+		window.open("https://hgvn23.github.io/mucLuc/" + searchValue + ".html", "_self");
+	}else if(danhSachId.includes(searchValue)) {
+		window.open("https://hgvn23.github.io/danhSachId/" + searchValue + ".html", "_self");
+	}else if(thongTinLienQuan.includes(searchValue)) {
+		window.open("https://hgvn23.github.io/thongTinLienQuan/" + searchValue + ".html", "_self");
 	}else if(searchValue === "?"){
 		window.open("https://hgvn23.github.io/commands/1help.html", "_self");
 	}else if(commands.includes(searchValue)){
 		window.open("https://hgvn23.github.io/commands/" + searchValue + ".html", "_self");
 	}else{
-		window.open("https://hgvn23.github.io/404error.html", "_self");
+		window.open("https://hgvn23.github.io/404.html", "_self");
 	}
 }
 
